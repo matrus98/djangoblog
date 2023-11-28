@@ -1,0 +1,12 @@
+h1 a, h2 a {
+    color: #DE781F;
+}
+
+body {
+    font-family: Potta One;
+}
+
+.page-header {
+    background-color: cadetblue;
+    padding: 20px;
+}

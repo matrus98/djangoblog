@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <title>Blog for programmers</title>
-</head>
-<body>
-    <p>Welcome on blog page!</p>
-</body>
-</html>
+{% extends 'blog/base.html' %}
+
+{% comment "comment title" %}
+Here I have got comment
+{% endcomment %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <p>opublikowany: {{ post.publish_date }}</p>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <em>{{ post.text|linebreaksbr }}</em>
+        </div>
+    {% endfor %}
+{% endblock %}
