@@ -9,6 +9,7 @@ Here I have got comment
         <div class="post">
             <p>opublikowany: {{ post.publish_date }}</p>
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <img src="{{ post.image.url }}" alt="Obrazek" width="80px">
             <em>{{ post.text|linebreaksbr }}</em>
         </div>
     {% endfor %}
